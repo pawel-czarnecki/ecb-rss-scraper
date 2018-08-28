@@ -1,6 +1,7 @@
 from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery
+from celery.schedules import crontab
 
 # set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecb.settings.local')
@@ -15,6 +16,13 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 
 # Load task modules from all registered Django app configs.
 app.autodiscover_tasks()
+
+app.conf.beat_schedule = {
+    'task_save_latest_exchange_rate': {
+        'task': 'apps.exchange_rate.tasks.task_save_latest_exchange_rate',
+        'schedule': crontab(hour=15, minute=16),
+    },
+}
 
 
 @app.task(bind=True)
