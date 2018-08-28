@@ -1,0 +1,15 @@
+- model: exchange_rate.currency
+  pk: 1
+  fields:
+    name: Polish zloty
+    symbol: PLN
+- model: exchange_rate.currency
+  pk: 2
+  fields:
+    name: US dollar
+    symbol: USD
+- model: exchange_rate.currency
+  pk: 3
+  fields:
+    name: Czech koruna
+    symbol: CZK
