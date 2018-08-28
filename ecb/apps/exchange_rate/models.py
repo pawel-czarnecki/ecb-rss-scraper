@@ -5,6 +5,9 @@ class Currency(models.Model):
     name = models.CharField(max_length=30)
     symbol = models.CharField(max_length=3, unique=True, null=False)
 
+    class Meta:
+        verbose_name_plural = 'Currencies'
+
     def __str__(self):
         return '%s (%s)' % (self.name, self.symbol)
 
