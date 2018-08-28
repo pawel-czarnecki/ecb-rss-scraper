@@ -123,6 +123,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+# Rest framework
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 20
+}
+
+
 # Celery
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
