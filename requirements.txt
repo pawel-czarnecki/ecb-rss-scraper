@@ -7,7 +7,7 @@ celery==4.2.1
 certifi==2018.8.13
 chardet==3.0.4
 decorator==4.3.0
-Django==1.11
+Django==2.2.24
 djangorestframework==3.8.2
 idna==2.7
 ipdb==0.11
