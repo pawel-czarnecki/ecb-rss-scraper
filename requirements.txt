@@ -4,7 +4,7 @@ beautifulsoup4==4.6.3
 billiard==3.5.0.4
 bs4==0.0.1
 celery==4.2.1
-certifi==2018.8.13
+certifi==2022.12.7
 chardet==3.0.4
 decorator==4.3.0
 Django==1.11
